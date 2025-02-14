@@ -2,9 +2,17 @@ package main
 
 import (
 	"encoding/json"
+	"fmt"
 	"log"
 	"net/http"
+
+	"github.com/alecthomas/kong"
+	kongyaml "github.com/alecthomas/kong-yaml"
 )
+
+var config struct {
+	Port int `required:"" default:"8080" env:"LPG_PORT"`
+}
 
 type Message struct 
 {
@@ -24,7 +32,10 @@ func pingHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
-    http.HandleFunc("GET /hello", helloHandler)
-	http.HandleFunc("POST /ping", pingHandler)
-    log.Fatal(http.ListenAndServe(":8080", nil))
+	kong.Parse(&config, kong.Configuration(kongyaml.Loader, "./config.yaml"))
+
+    http.HandleFunc("GET  /hello", helloHandler)
+	http.HandleFunc("POST /ping",  pingHandler)
+	
+    log.Fatal(http.ListenAndServe(fmt.Sprint(":",config.Port), nil))
 }
