@@ -5,18 +5,23 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LpgWebApp", "LpgWebApp\LpgWebApp.csproj", "{49C0CD3D-C05E-48C1-B5E5-98D32E383200}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{13FEDC49-6208-469A-9C40-C35A777B0C9F}"
+	ProjectSection(SolutionItems) = preProject
+		Dockerfile = Dockerfile
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{49C0CD3D-C05E-48C1-B5E5-98D32E383200}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{49C0CD3D-C05E-48C1-B5E5-98D32E383200}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{49C0CD3D-C05E-48C1-B5E5-98D32E383200}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{49C0CD3D-C05E-48C1-B5E5-98D32E383200}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 EndGlobal
