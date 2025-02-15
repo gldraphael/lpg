@@ -10,9 +10,9 @@
 | Hello API             | ✅ | ✅ | ✅   |   |
 | Dev container setup   | ✅ | ✅ | ✅   |   |
 | Dependency management | ✅ | ✅ | ✅   |   |
-| Configuration         | ✅ | ✅ |        |   |
+| Configuration         | ✅ | ✅ | ✅   |   |
 | Structured logging    |    |    |        |   |
-| Docker container      |    | ✅ |        |   |
+| Docker container      | ✅ | ✅ |  ✅  |   |
 | Helm chart            |    |    |        |   |
 | CI pipelines          |    |    |        |   |
 | Health checks         |    |    |        |   |
