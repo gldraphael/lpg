@@ -1,0 +1,6 @@
+services:
+  go:
+    build:
+      context: .
+    ports:
+      - 8182:8080

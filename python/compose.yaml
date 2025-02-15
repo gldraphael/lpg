@@ -1,0 +1,6 @@
+services:
+  python:
+    build:
+      context: .
+    ports:
+      - 8183:8080
