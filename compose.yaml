@@ -1,0 +1,4 @@
+include:
+  - ./csharp/compose.yaml
+  - ./go/compose.yaml
+  - ./python/compose.yaml

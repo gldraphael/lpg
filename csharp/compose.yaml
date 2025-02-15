@@ -1,0 +1,6 @@
+services:
+  csharp:
+    build:
+      context: .
+    ports:
+      - 8181:8080
