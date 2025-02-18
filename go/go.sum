@@ -2,6 +2,8 @@ github.com/alecthomas/kong v1.8.0 h1:LEDIdSYrHU+4oTF2BL0NAfw++wH6lg/LzAJodTkLikM
 github.com/alecthomas/kong v1.8.0/go.mod h1:p2vqieVMeTAnaC83txKtXe8FLke2X07aruPWXyMPQrU=
 github.com/alecthomas/kong-yaml v0.2.0 h1:iiVVqVttmOsHKawlaW/TljPsjaEv1O4ODx6dloSA58Y=
 github.com/alecthomas/kong-yaml v0.2.0/go.mod h1:vMvOIy+wpB49MCZ0TA3KMts38Mu9YfRP03Q1StN69/g=
+github.com/danielgtaylor/huma/v2 v2.28.0 h1:W+hIT52MigO73edJNJWXU896uC99xSBWpKoE2PRyybM=
+github.com/danielgtaylor/huma/v2 v2.28.0/go.mod h1:67KO0zmYEkR+LVUs8uqrcvf44G1wXiMIu94LV/cH2Ek=
 gopkg.in/check.v1 v0.0.0-20161208181325-20d25e280405/go.mod h1:Co6ibVJAznAaIkqp8huTwlJQCZ016jof/cbN4VW5Yz0=
 gopkg.in/yaml.v3 v3.0.1 h1:fxVm/GzAzEWqLHuvctI91KS9hhNmmWOoWu0XTYJS7CA=
 gopkg.in/yaml.v3 v3.0.1/go.mod h1:K4uyk7z7BCEPqu6E+C64Yfv1cQ7kz7rIZviUmN+EgEM=
