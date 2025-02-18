@@ -2,21 +2,6 @@
 
 
 
-## Matrix
-
-
-|                       | C# | Go | Python |   |
-|-----------------------|----|----|--------|---|
-| Hello API             | ✅ | ✅ | ✅   |   |
-| Dev container setup   | ✅ | ✅ | ✅   |   |
-| Dependency management | ✅ | ✅ | ✅   |   |
-| Configuration         | ✅ | ✅ | ✅   |   |
-| Structured logging    |    |    |        |   |
-| Docker container      | ✅ | ✅ |  ✅  |   |
-| Helm chart            |    |    |        |   |
-| CI pipelines          |    |    |        |   |
-| Health checks         |    |    |        |   |
-
 ## Run with docker compose
 
 ```sh
@@ -31,3 +16,21 @@ Service  | Port
 `csharp` | 8081
 `go`     | 8082
 `python` | 8083
+
+## Support Matrix
+
+|                       | C# | Go | Python |   |
+|-----------------------|----|----|--------|---|
+| Hello API             | ✅ | ✅ | ✅   |   |
+| Open API & Swagger UI | ✅ | ✅ | ✅   |   |
+| Dev container         | ✅ | ✅ | ✅   |   |
+| Dependency management | ✅ | ✅ | ✅   |   |
+| Configuration         | ✅ | ✅ | ✅   |   |
+| Structured logging    |    |    |        |   |
+| Docker container      | ✅ | ✅ |  ✅  |   |
+| Helm chart            |    |    |        |   |
+| CI pipelines          |    |    |        |   |
+| Health checks         |    |    |        |   |
+
+For more information, refer to the [spec](./spec.md).
+
