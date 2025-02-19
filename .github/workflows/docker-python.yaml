@@ -1,0 +1,19 @@
+name: "Python: Docker Image CI"
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+
+  docker:
+    uses: ./.github/workflows/docker.yaml
+    with:
+      context: ./python
+      push: ${{ startsWith(github.ref, 'refs/tags/v') }}
+      image: lpg-python
+    permissions:
+      contents: read
+      packages: write
