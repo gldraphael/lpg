@@ -1,0 +1,19 @@
+name: "Go: Docker Image CI"
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+
+  docker:
+    uses: ./.github/workflows/docker.yaml
+    with:
+      context: ./go
+      push: false
+      image: lpg-go
+    permissions:
+      contents: read
+      packages: write
