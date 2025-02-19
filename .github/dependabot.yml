@@ -6,7 +6,19 @@
 
 version: 2
 updates:
- - package-ecosystem: "devcontainers"
-   directory: "/"
-   schedule:
-     interval: weekly
+- package-ecosystem: devcontainers
+  directories: ["/csharp", "/go", "/python"]
+  schedule:
+    interval: weekly
+- package-ecosystem: gomod
+  directory: "/go"
+  schedule:
+    interval: weekly
+- package-ecosystem: nuget
+  directory: "/csharp"
+  schedule:
+    interval: weekly
+- package-ecosystem: pip
+  directory: "/python"
+  schedule:
+    interval: weekly
