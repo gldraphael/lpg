@@ -12,7 +12,7 @@ jobs:
     uses: ./.github/workflows/docker.yaml
     with:
       context: ./go
-      push: false
+      push: startsWith(github.ref, 'refs/tags/v')
       image: lpg-go
     permissions:
       contents: read
