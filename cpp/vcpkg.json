@@ -1,0 +1,22 @@
+{
+  "dependencies": [
+    {
+        "name": "oatpp",
+        "version>=": "1.3.0"
+    },
+    {
+        "name": "oatpp-swagger",
+        "version>=": "1.3.0"
+    }
+  ],
+  "overrides": [
+    { 
+        "name": "oatpp", 
+        "version": "1.3.0"
+    },
+    { 
+        "name": "oatpp-swagger", 
+        "version": "1.3.0"
+    }
+  ]
+}
