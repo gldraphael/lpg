@@ -4,12 +4,18 @@ set(CMAKE_CXX_STANDARD 23)
 
 
 add_library(lpg-lib
-        src/controller/StaticController.hpp
+
+        src/dto/MessageDto.hpp
         src/dto/StatusDto.hpp
+
+        src/controller/StaticController.hpp
+        src/controller/HelloApiController.hpp
+
         src/AppComponent.hpp
         src/SwaggerComponent.hpp
         src/ErrorHandler.cpp
-        src/ErrorHandler.hpp)
+        src/ErrorHandler.hpp
+)
 
 
 find_package(oatpp          1.3.0 REQUIRED)

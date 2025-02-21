@@ -1,10 +1,10 @@
 
 #include "AppComponent.hpp"
 
-// #include "controller/UserController.hpp"
 #include "controller/StaticController.hpp"
+#include "controller/HelloApiController.hpp"
 
-// #include "oatpp-swagger/Controller.hpp"
+#include "oatpp-swagger/Controller.hpp"
 
 #include "oatpp/network/Server.hpp"
 
@@ -19,9 +19,10 @@ void run() {
 
   oatpp::web::server::api::Endpoints docEndpoints;
 
-  // docEndpoints.append(router->addController(UserController::createShared())->getEndpoints());
+//   docEndpoints.append(router->addController(UserController::createShared())->getEndpoints());
 
-  // router->addController(oatpp::swagger::Controller::createShared(docEndpoints));
+    docEndpoints.append(router ->addController(HelloApiController::createShared())->getEndpoints());
+  router->addController(oatpp::swagger::Controller::createShared(docEndpoints));
   router->addController(StaticController::createShared());
 
   /* Get connection handler component */
