@@ -1,39 +1,35 @@
-use axum::{
-    routing::{get, post},
-    http::StatusCode,
-    Json, Router,
-};
-use serde::Serialize;
+use std::{io::Error, net::{Ipv4Addr, SocketAddr}};
+use axum;
+use tokio::net::TcpListener;
+use utoipa::OpenApi;
+use utoipa_axum::router::OpenApiRouter;
+use utoipa_swagger_ui::SwaggerUi;
+
+pub mod api;
+
+const HELLO_API_TAG: &str = "exp";
 
 #[tokio::main]
-async fn main() {
-    // initialize tracing
-    tracing_subscriber::fmt::init();
+async fn main() -> Result<(), Error> {
+    #[derive(OpenApi)]
+    #[openapi(
+        tags(
+            (name = HELLO_API_TAG, description = "The Hello API")
+        ),
+        info(
+            title = "Language Playground: Rust"
+        )
+    )]
+    struct ApiDoc;
 
-    // build our application with a route
-    let app = Router::new()
-        .route("/hello", get(hello))
-        .route("/ping", post(ping));
+    let (router, api) = OpenApiRouter::with_openapi(ApiDoc::openapi())
+        .merge(api::hello_api::router())
+        .split_for_parts();
 
-    // run our app with hyper, listening globally on port 3000
-    let listener = tokio::net::TcpListener::bind("0.0.0.0:3000").await.unwrap();
-    axum::serve(listener, app).await.unwrap();
-}
+    let router = router
+        .merge(SwaggerUi::new("/").url("/docs/openapi.json", api.clone()));
 
-async fn hello() -> (StatusCode, Json<Message>) {
-    (StatusCode::OK, Json(Message {
-        msg: "Hello, world!".to_string()
-    }))
-}
-
-async fn ping() -> (StatusCode, Json<Message>) {
-    (StatusCode::OK, Json(Message {
-        msg: "pong".to_string()
-    }))
-}
-
-
-#[derive(Serialize)]
-struct Message {
-    msg: String
+    let address = SocketAddr::from((Ipv4Addr::UNSPECIFIED, 8080));
+    let listener = TcpListener::bind(&address).await?;
+    axum::serve(listener, router.into_make_service()).await
 }
