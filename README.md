@@ -20,17 +20,17 @@ Service  | Port
 ## Support Matrix
 
 |                       | C++ | C# | Go | Python | Rust |
-|-----------------------|-----|----|----|--------|---|
-| Hello API             | ❌ | ✅ | ✅ | ✅    | ❌ |
-| Open API & Swagger UI | ❌ | ✅ | ✅ | ✅    | ❌ |
-| Dev container         | ✅ | ✅ | ✅ | ✅    | ✅ |
-| Dependency management | ❌ | ✅ | ✅ | ✅    | ❌ |
-| Configuration         | ❌ | ✅ | ✅ | ✅    | ❌ |
-| Structured logging    | ❌ | ❌ | ❌ | ❌    | ❌ |
-| Docker container      | ❌ | ✅ | ✅ | ✅    | ❌ |
-| Helm chart            | ❌ | ❌ | ❌ | ❌    | ❌ |
-| CI pipelines          | ❌ | ❌ | ❌ | ❌    | ❌ |
-| Health checks         | ❌ | ❌ | ❌ | ❌    | ❌ |
+|-----------------------|-----|----|----|--------|------|
+| Hello API             | ❌ | ✅ | ✅ |  ✅   |  ✅  |
+| Open API & Swagger UI | ❌ | ✅ | ✅ |  ✅   |  ✅  |
+| Dev container         | ✅ | ✅ | ✅ |  ✅   |  ✅  |
+| Dependency management | ❌ | ✅ | ✅ |  ✅   |  ❌  |
+| Configuration         | ❌ | ✅ | ✅ |  ✅   |  ❌  |
+| Structured logging    | ❌ | ❌ | ❌ |  ❌   |  ❌  |
+| Docker container      | ❌ | ✅ | ✅ |  ✅   |  ❌  |
+| Helm chart            | ❌ | ❌ | ❌ |  ❌   |  ❌  |
+| CI pipelines          | ❌ | ❌ | ❌ |  ❌   |  ❌  |
+| Health checks         | ❌ | ❌ | ❌ |  ❌   |  ❌  |
 
 For more information, refer to the [spec](./spec.md).
 
