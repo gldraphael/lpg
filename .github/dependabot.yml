@@ -7,7 +7,7 @@
 version: 2
 updates:
 - package-ecosystem: devcontainers
-  directories: ["/csharp", "/go", "/python"]
+  directories: ["/csharp", "/go", "/python", "/rust"]
   schedule:
     interval: weekly
 - package-ecosystem: gomod
@@ -20,5 +20,10 @@ updates:
     interval: weekly
 - package-ecosystem: pip
   directory: "/python"
+  schedule:
+    interval: weekly
+    interval: weekly
+- package-ecosystem: cargo
+  directory: "/rust"
   schedule:
     interval: weekly
