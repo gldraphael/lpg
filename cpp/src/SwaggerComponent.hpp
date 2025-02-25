@@ -2,6 +2,7 @@
 #ifndef SwaggerComponent_hpp
 #define SwaggerComponent_hpp
 
+// #include "oatpp-swagger/ControllerPaths.hpp" See: https://github.com/oatpp/oatpp-swagger/issues/99
 #include "oatpp-swagger/Model.hpp"
 #include "oatpp-swagger/Resources.hpp"
 #include "oatpp/core/macro/component.hpp"
@@ -21,21 +22,28 @@ public:
     oatpp::swagger::DocumentInfo::Builder builder;
     
     builder
-    .setTitle("User entity service")
-    .setDescription("CRUD API Example project with swagger docs")
+    .setTitle("Language Playground: C++")
     .setVersion("1.0")
-    .setContactName("Ivan Ovsyanochka")
-    .setContactUrl("https://oatpp.io/")
-    
-    .setLicenseName("Apache License, Version 2.0")
-    .setLicenseUrl("http://www.apache.org/licenses/LICENSE-2.0")
-    
+    .setContactName("Galdin Raphael")
+    .setContactUrl("https://github.com/gldraphael/lpg")
     .addServer("http://localhost:8000", "server on localhost");
     
     return builder.build();
     
   }());
-  
+
+  // This code needs v1.3.1. See: https://github.com/oatpp/oatpp-swagger/issues/99
+//   /**
+//    *  Swagger Controller Paths
+//    */
+//   OATPP_CREATE_COMPONENT(std::shared_ptr<oatpp::swagger::ControllerPaths>, controllerPaths)([] {
+//     auto paths = std::make_shared<oatpp::swagger::ControllerPaths>();
+//     paths->apiJson = "docs/openapi.json";       // default is "api-docs/oas-3.0.0.json"
+//     paths->ui = "/";                                   // default is "swagger/ui"
+//     paths->uiResources = "swagger/{filename}";         // default is "swagger/{filename}"
+//     return paths;
+//   }());
+
   
   /**
    *  Swagger-Ui Resources (<oatpp-examples>/lib/oatpp-swagger/res)
