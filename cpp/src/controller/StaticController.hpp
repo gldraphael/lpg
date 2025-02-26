@@ -22,19 +22,10 @@ public:
     return std::make_shared<StaticController>(objectMapper);
   }
 
+  // This should not be needed once https://github.com/oatpp/oatpp-swagger/issues/99 is complete
   ENDPOINT("GET", "/", root) {
-    const char* html =
-      "<html lang='en'>"
-      "  <head>"
-      "    <meta charset=utf-8/>"
-      "  </head>"
-      "  <body>"
-      "    <p>Hello CRUD example project!</p>"
-      "    <a href='swagger/ui'>Checkout Swagger-UI page</a>"
-      "  </body>"
-      "</html>";
-    auto response = createResponse(Status::CODE_200, html);
-    response->putHeader(Header::CONTENT_TYPE, "text/html");
+    auto response = createResponse(Status::CODE_307, "");
+    response->putHeader("Location", "/swagger/ui");
     return response;
   }
 
