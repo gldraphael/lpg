@@ -11,7 +11,7 @@ class MessageDto : public oatpp::DTO {
   DTO_INIT(MessageDto, DTO)
 
   DTO_FIELD_INFO(message) {
-    info->description = "Message";
+    info->description = "The message to send.";
   }
   DTO_FIELD(String, message, "msg");
 };

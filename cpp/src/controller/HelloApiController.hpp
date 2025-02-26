@@ -29,6 +29,7 @@ public:
 
   ENDPOINT_INFO(hello) {
     info->summary = "The \"Hello\" endpoint.";
+    info->addTag("exp");
 
     info->addConsumes<Object<MessageDto>>("application/json");
     info->addResponse<Object<MessageDto>>(Status::CODE_200, "application/json");
@@ -42,6 +43,7 @@ public:
 
   ENDPOINT_INFO(ping) {
     info->summary = "The \"ping\" endpoint.";
+    info->addTag("exp");
 
     info->addConsumes<Object<MessageDto>>("application/json");
     info->addResponse<Object<MessageDto>>(Status::CODE_200, "application/json");
