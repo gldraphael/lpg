@@ -34,10 +34,23 @@ public:
     info->addResponse<Object<MessageDto>>(Status::CODE_200, "application/json");
   }
   ENDPOINT("GET", "hello", hello) {
-    MessageDto msg;
-    msg.message = "Hello, world!";
+    auto msg = MessageDto::createShared();
+    msg->message = "Hello, world!";
     
-    return createDtoResponse(Status::CODE_200, oatpp::Object<MessageDto>(msg.createShared()));
+    return createDtoResponse(Status::CODE_200, msg);
+  }
+
+  ENDPOINT_INFO(ping) {
+    info->summary = "The \"ping\" endpoint.";
+
+    info->addConsumes<Object<MessageDto>>("application/json");
+    info->addResponse<Object<MessageDto>>(Status::CODE_200, "application/json");
+  }
+  ENDPOINT("POST", "ping", ping) {
+    auto msg = MessageDto::createShared();
+    msg->message = "pong";
+    
+    return createDtoResponse(Status::CODE_200, msg);
   }
   
 };
