@@ -21,10 +21,10 @@ Service  | Port
 
 |                       | C++ | C# | Go | Python | Rust |
 |-----------------------|-----|----|----|--------|------|
-| Hello API             | ❌ | ✅ | ✅ |  ✅   |  ✅  |
-| Open API & Swagger UI | ❌ | ✅ | ✅ |  ✅   |  ✅  |
+| Hello API             | ✅ | ✅ | ✅ |  ✅   |  ✅  |
+| Open API & Swagger UI | ✅ | ✅ | ✅ |  ✅   |  ✅  |
 | Dev container         | ✅ | ✅ | ✅ |  ✅   |  ✅  |
-| Dependency management | ❌ | ✅ | ✅ |  ✅   |  ❌  |
+| Dependency management | ✅ | ✅ | ✅ |  ✅   |  ❌  |
 | Configuration         | ❌ | ✅ | ✅ |  ✅   |  ❌  |
 | Structured logging    | ❌ | ❌ | ❌ |  ❌   |  ❌  |
 | Docker container      | ❌ | ✅ | ✅ |  ✅   |  ❌  |
