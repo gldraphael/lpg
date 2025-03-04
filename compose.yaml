@@ -2,3 +2,4 @@ include:
   - ./csharp/compose.yaml
   - ./go/compose.yaml
   - ./python/compose.yaml
+  - ./rust/compose.yaml
