@@ -13,9 +13,10 @@ This will expose the services at different ports as follows:
 
 Service  | Port
 ---------|-------
-`csharp` | 8081
-`go`     | 8082
-`python` | 8083
+`csharp` | 8181
+`go`     | 8182
+`python` | 8183
+`python` | 8184
 
 ## Support Matrix
 
@@ -24,12 +25,12 @@ Service  | Port
 | Hello API             | ✅ | ✅ | ✅ |  ✅   |  ✅  |
 | Open API & Swagger UI | ✅ | ✅ | ✅ |  ✅   |  ✅  |
 | Dev container         | ✅ | ✅ | ✅ |  ✅   |  ✅  |
-| Dependency management | ✅ | ✅ | ✅ |  ✅   |  ❌  |
+| Dependency management | ✅ | ✅ | ✅ |  ✅   |  ✅  |
 | Configuration         | ❌ | ✅ | ✅ |  ✅   |  ❌  |
 | Structured logging    | ❌ | ❌ | ❌ |  ❌   |  ❌  |
-| Docker container      | ❌ | ✅ | ✅ |  ✅   |  ❌  |
+| Docker container      | ❌ | ✅ | ✅ |  ✅   |  ✅  |
 | Helm chart            | ❌ | ❌ | ❌ |  ❌   |  ❌  |
-| CI pipelines          | ❌ | ❌ | ❌ |  ❌   |  ❌  |
+| CI pipelines          | ❌ | ✅ | ✅ |  ✅   |  ✅  |
 | Health checks         | ❌ | ❌ | ❌ |  ❌   |  ❌  |
 
 For more information, refer to the [spec](./spec.md).

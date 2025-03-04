@@ -1,0 +1,6 @@
+services:
+  rust:
+    build:
+      context: .
+    ports:
+      - 8184:8080
