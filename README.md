@@ -28,9 +28,9 @@ Service  | Port
 | Dependency management | ✅ | ✅ | ✅ |  ✅   |  ✅  |
 | Configuration         | ❌ | ✅ | ✅ |  ✅   |  ❌  |
 | Structured logging    | ❌ | ❌ | ❌ |  ❌   |  ❌  |
-| Docker container      | ❌ | ✅ | ✅ |  ✅   |  ✅  |
+| Docker container      | ✅ | ✅ | ✅ |  ✅   |  ✅  |
 | Helm chart            | ❌ | ❌ | ❌ |  ❌   |  ❌  |
-| CI pipelines          | ❌ | ✅ | ✅ |  ✅   |  ✅  |
+| CI pipelines          | ✅ | ✅ | ✅ |  ✅   |  ✅  |
 | Health checks         | ❌ | ❌ | ❌ |  ❌   |  ❌  |
 
 For more information, refer to the [spec](./spec.md).

@@ -1,0 +1,6 @@
+services:
+  cpp:
+    build:
+      context: .
+    ports:
+      - 8180:8080
