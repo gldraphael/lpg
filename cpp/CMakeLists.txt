@@ -31,7 +31,7 @@ file(COPY
     DESTINATION "./res/swagger"
 )
 add_definitions(
-    -DOATPP_SWAGGER_RES_PATH="./res/swagger"
+    -DOATPP_SWAGGER_RES_PATH="./res/swagger/res"
 )
 if(CMAKE_SYSTEM_NAME MATCHES Linux)
     find_package(Threads REQUIRED)
