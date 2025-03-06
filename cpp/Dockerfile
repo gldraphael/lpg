@@ -23,7 +23,10 @@ WORKDIR /users
 RUN cat /etc/passwd | grep nobody > passwd.nobody
 
 WORKDIR /app
-COPY CMakeLists.txt CMakePresets.json vcpkg-configuration.json vcpkg.json ./
+COPY vcpkg-configuration.json vcpkg.json ./
+RUN vcpkg install
+
+COPY CMakeLists.txt CMakePresets.json ./
 COPY ./src ./src
 RUN cmake --preset release \
     && cmake --build --preset release
@@ -41,6 +44,5 @@ USER nobody
 
 WORKDIR /app
 COPY --from=builder /app/out/build/release/lpg  .
-COPY --from=builder /app/out/build/release/res/ .
-# ENTRYPOINT ["./lpg"]
-CMD exec /bin/bash -c "trap : TERM INT; sleep infinity & wait"
+COPY --from=builder /app/out/build/release/res/ ./res
+ENTRYPOINT ["./lpg"]
