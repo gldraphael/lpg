@@ -26,11 +26,13 @@ target_link_libraries(lpg-lib
         PUBLIC oatpp::oatpp-swagger
 )
 
-add_definitions(
-    ## define path to swagger-ui static resources folder
-    -DOATPP_SWAGGER_RES_PATH="${oatpp-swagger_INCLUDE_DIRS}/../bin/oatpp-swagger/res"
+file(COPY
+    "${oatpp-swagger_INCLUDE_DIRS}/../bin/oatpp-swagger/res"
+    DESTINATION "./res/swagger"
 )
-
+add_definitions(
+    -DOATPP_SWAGGER_RES_PATH="./res/swagger/res"
+)
 if(CMAKE_SYSTEM_NAME MATCHES Linux)
     find_package(Threads REQUIRED)
     target_link_libraries(lpg-lib INTERFACE Threads::Threads ${CMAKE_DL_LIBS})
