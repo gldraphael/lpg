@@ -3,4 +3,4 @@ services:
     build:
       context: .
     ports:
-      - 8180:8080
+      - 8180:8000
